@@ -17,7 +17,7 @@ func TestHandleTotalSales(t *testing.T) {
 	logger, _ := zap.NewDevelopment()
 	repo := repository.NewInMemorySalesRepository()
 	salesService := &service.SalesService{Repo: repo}
-	handler := &SalesHandler{Logger: logger, Service: salesService}
+	handler := NewSalesHandler(salesService, logger)
 
 	reqBody := map[string]string{
 		"operation":  "total_sales",

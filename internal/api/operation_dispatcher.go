@@ -7,4 +7,5 @@ import (
 
 var operationHandlers = map[models.Operation]func(http.ResponseWriter, []byte, *SalesHandler){
 	models.TotalSales: handleTotalSales,
+	// Add more if you need
 }

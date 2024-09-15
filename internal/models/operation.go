@@ -8,6 +8,7 @@ const (
 
 var allowedOperations = []Operation{
 	TotalSales,
+	// Add more if you need
 }
 
 func IsValidOperation(op Operation) bool {

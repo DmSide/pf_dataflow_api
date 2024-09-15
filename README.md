@@ -86,7 +86,7 @@ This API service is developed for DataFlow Inc. to manage and analyze sales data
 3. Install dependencies using `go mod tidy`.
 
 ## Run
-1. Run the server using `go run main.go`.
+1. Run the server using `go run cmd/server/main.go`.
 2. The server will start on `localhost:8080`.
 
 ## Test

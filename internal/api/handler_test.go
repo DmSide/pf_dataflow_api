@@ -18,7 +18,7 @@ func TestAddSale(t *testing.T) {
 	repo := repository.NewInMemorySalesRepository()
 	salesService := &service.SalesService{Repo: repo}
 	logger, _ := zap.NewDevelopment()
-	handler := &SalesHandler{Service: salesService, Logger: logger}
+	handler := NewSalesHandler(salesService, logger)
 
 	sale := models.Sale{
 		ProductID: "1",
@@ -49,7 +49,7 @@ func TestCalculateTotalSales(t *testing.T) {
 	repo := repository.NewInMemorySalesRepository()
 	salesService := &service.SalesService{Repo: repo}
 	logger, _ := zap.NewDevelopment()
-	handler := &SalesHandler{Service: salesService, Logger: logger}
+	handler := NewSalesHandler(salesService, logger)
 
 	sale := models.Sale{
 		ProductID: "1",
@@ -91,7 +91,7 @@ func TestGetSales(t *testing.T) {
 	repo := repository.NewInMemorySalesRepository()
 	salesService := &service.SalesService{Repo: repo}
 	logger, _ := zap.NewDevelopment()
-	handler := &SalesHandler{Service: salesService, Logger: logger}
+	handler := NewSalesHandler(salesService, logger)
 
 	sale := models.Sale{
 		ProductID: "1",
