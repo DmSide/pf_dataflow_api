@@ -93,3 +93,4 @@ This API service is developed for DataFlow Inc. to manage and analyze sales data
 1. Run tests using `go test ./...`.
 2. For coverage run `go test -tags=testcoverage -cover ./...`.
 3. For running test of concurrency use `go test -race -tags=concurrency ./...`.
+4. For running test of performance with memory use `go test -bench=. -benchmem ./internal/repository`.
